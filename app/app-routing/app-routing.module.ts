@@ -6,7 +6,9 @@ import { AboutComponent } from '../views/about/about.component'
 
 const routes: Routes = [
   { path:'dashboard', component: DashboardComponent },
-  { path:'about', component: AboutComponent }
+  { path:'about', component: AboutComponent },
+  { path:'', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path:'**', redirectTo: '/dashboard', pathMatch: 'full' }
 ]; 
 
 @NgModule({
